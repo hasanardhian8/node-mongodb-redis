@@ -1,12 +1,13 @@
 {
   "name": "mongodb-redis",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node",
-    "build": "babel lib -d dist",
-    "serve": "ndoe dist/index.js"
+    "build": "babel src/app.js -d dist",
+    "dev": "nodemon src/app.js --exec babel-node",
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,8 @@
   "devDependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.0",
     "nodemon": "^3.1.0"
   }
 }
